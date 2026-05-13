@@ -1,5 +1,5 @@
-# HTML Inject — SillyTavern 扩展
-
+#HTML 注入 — SillyTavern 扩展
+**（注意：需要安装酒馆助手开启渲染功能）**
 > 将 AI 输出的精简 HTML 自动渲染为带主题样式的交互式界面，支持状态栏、选项按钮、对白高亮，并自动折叠上下文以节省 token。
 
 ---
