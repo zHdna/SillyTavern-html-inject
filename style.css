@@ -1,0 +1,19 @@
+/* HTML Inject - 扩展自身样式（非主题样式，主题在模板中定义） */
+
+.html-inject-debug {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #0f0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: monospace;
+    z-index: 9999;
+    display: none;
+}
+
+.html-inject-debug.active {
+    display: block;
+}

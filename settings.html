@@ -1,0 +1,77 @@
+<div class="html-inject-settings">
+    <h3>HTML Inject 设置</h3>
+    <hr />
+
+    <div class="flex-container">
+        <label class="checkbox_label">
+            <input id="html_inject_enabled" type="checkbox" />
+            <span>启用 HTML 模板注入</span>
+        </label>
+    </div>
+
+    <div class="flex-container">
+        <label class="checkbox_label">
+            <input id="html_inject_fold_context" type="checkbox" />
+            <span>折叠 HTML 为纯文本进上下文（节省 token）</span>
+        </label>
+    </div>
+
+    <div class="flex-container">
+        <label for="html_inject_theme">当前主题</label>
+        <select id="html_inject_theme" class="text_pole">
+            <option value="羊皮卷">羊皮卷（暖色调）</option>
+            <option value="深色模式">深色模式</option>
+        </select>
+    </div>
+
+    <div class="flex-container">
+        <span id="html_inject_theme_list" class="note"></span>
+    </div>
+
+    <hr />
+
+    <div class="flex-container">
+        <label for="html_inject_status_mode">状态栏模式</label>
+        <select id="html_inject_status_mode" class="text_pole">
+            <option value="auto">自动检测（读取角色卡）</option>
+            <option value="manual">手动指定字段</option>
+            <option value="off">关闭（不显示状态栏）</option>
+        </select>
+    </div>
+    <div class="flex-container">
+        <small id="html_inject_status_hint">自动检测会读取角色卡描述中包含的状态属性（HP/MP/好感度等）</small>
+    </div>
+    <div class="flex-container" id="html_inject_manual_fields_row" style="display:none;">
+        <label for="html_inject_status_fields">状态字段（逗号分隔）</label>
+        <input id="html_inject_status_fields" class="text_pole" type="text" placeholder="HP,MP,金币,好感度" />
+    </div>
+    <div class="flex-container">
+        <small id="html_inject_status_detected"></small>
+    </div>
+
+    <hr />
+
+    <div class="flex-container">
+        <label>AI 提示词（根据当前角色卡动态生成）</label>
+    </div>
+    <div class="flex-container">
+        <textarea id="html_inject_prompt_template" class="text_pole" rows="14" readonly style="font-family: monospace; font-size: 12px;"></textarea>
+    </div>
+    <div class="flex-container">
+        <small>将此提示词添加到角色系统提示或 ST 的系统提示中，让 AI 按格式输出</small>
+    </div>
+    <div class="flex-container">
+        <button id="html_inject_copy_prompt" class="menu_button">
+            <i class="fa-solid fa-copy"></i> 复制提示词
+        </button>
+        <button id="html_inject_reinject" class="menu_button">
+            <i class="fa-solid fa-rotate"></i> 重新注入所有消息
+        </button>
+    </div>
+
+    <hr />
+
+    <div class="flex-container">
+        <small>提示：onclick 使用 HtmlInject.toggleSection(this) 和 HtmlInject.onChoice(this, '文本')</small>
+    </div>
+</div>
